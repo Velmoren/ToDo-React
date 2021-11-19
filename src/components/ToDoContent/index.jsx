@@ -5,7 +5,7 @@ import {
 } from './ToDo.styled'
 import ToDoListItem from './ToDoListItem'
 
-const ToDo = () => {
+const ToDoContent = () => {
     return (
         <ToDoContainer>
             <ToDoListNotDone>
@@ -18,4 +18,4 @@ const ToDo = () => {
     );
 };
 
-export default ToDo;
+export default ToDoContent;

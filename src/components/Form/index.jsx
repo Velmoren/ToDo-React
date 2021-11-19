@@ -1,5 +1,5 @@
-import FormControl from "../FormControl";
-import FormButtonSubmit from "../FormButtonSubmit";
+import FormControl from "./FormControl";
+import FormButtonSubmit from "./FormButtonSubmit";
 
 import {FormBlock} from './Form.styled'
 

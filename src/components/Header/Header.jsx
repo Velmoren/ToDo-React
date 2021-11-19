@@ -1,13 +1,16 @@
-function Header(props) {
+import Form from "../Form";
+
+import { HeaderWrapper } from './Header.styled'
+
+const Header = () => {
+    const submitForm = (e) => {
+        e.preventDefault()
+        console.log('Данные отправлены!')
+    }
     return (
-        <header className="header">
-            <form className="todo-control">
-                <label>
-                    <input className="header-input" type="text" placeholder="Какие планы?"/>
-                </label>
-                <button className="header-button" id="add" type="submit">asd</button>
-            </form>
-        </header>
+        <HeaderWrapper>
+            <Form onSubmit={submitForm} />
+        </HeaderWrapper>
     );
 }
 
