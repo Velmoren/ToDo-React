@@ -1,9 +1,14 @@
-import {FormInput, FormLabel} from './FormControl.styled'
+import { FormInput, FormLabel } from './FormControl.styled'
 
-const FormControl = ({name, type, value, onChange}) => {
+const FormControl = ({ name, type, valueInput, onChangeInput }) => {
     return (
         <FormLabel>
-            <FormInput name={name} type={type} value={value} onChange={onChange}/>
+            <FormInput
+                name={name}
+                type={type}
+                value={valueInput}
+                onChange={onChangeInput}
+            />
         </FormLabel>
     );
 };

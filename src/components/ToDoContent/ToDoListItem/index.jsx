@@ -9,7 +9,7 @@ import {
     ToDoListItemButtonComplete
 } from './ToDoListItem.styled'
 
-const ToDoListItem = ({completed}) => {
+const ToDoListItem = ({ text, completed }) => {
     const unchecking = () => {
         alert('unchecking')
     }
@@ -24,7 +24,7 @@ const ToDoListItem = ({completed}) => {
 
     return (
         <ToDoListItemWrapper>
-            <ToDoListItemText>Сварить кофе</ToDoListItemText>
+            <ToDoListItemText>{text}</ToDoListItemText>
             <ToDoListItemButtons>
                 <ToDoListItemButtonRemove
                     icon={trash}
