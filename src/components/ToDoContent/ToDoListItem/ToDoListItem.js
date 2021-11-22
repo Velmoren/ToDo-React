@@ -1,3 +1,5 @@
+import { useDispatch } from 'react-redux'
+
 import trash from '../../../assets/icons/trash.png'
 import uncheck from '../../../assets/icons/uncheck.png'
 import check from '../../../assets/icons/check.png'
@@ -5,34 +7,31 @@ import {
     ToDoListItemWrapper,
     ToDoListItemText,
     ToDoListItemButtons,
-    ToDoListItemButtonRemove,
-    ToDoListItemButtonComplete
+    ToDoListItemButton
 } from './ToDoListItem.styled'
 
-const ToDoListItem = ({ text, completed }) => {
-    const unchecking = () => {
-        alert('unchecking')
-    }
+const ToDoListItem = ({ text, id, completed }) => {
+    const dispatch = useDispatch()
 
     const checking = () => {
-        alert('checking')
+        dispatch({ type: 'CHANGE_TODO_COMPLETED', id })
     }
 
     const removing = () => {
-        alert('removing')
+        dispatch({ type: 'REMOVE_TODO', id, completed })
     }
 
     return (
         <ToDoListItemWrapper>
             <ToDoListItemText>{text}</ToDoListItemText>
             <ToDoListItemButtons>
-                <ToDoListItemButtonRemove
+                <ToDoListItemButton
                     icon={trash}
                     onClick={removing}
                 />
-                <ToDoListItemButtonComplete
+                <ToDoListItemButton
                     icon={completed ? check : uncheck}
-                    onClick={completed ? unchecking : checking}
+                    onClick={checking}
                 />
             </ToDoListItemButtons>
         </ToDoListItemWrapper>

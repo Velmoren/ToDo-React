@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HeaderWrapper = styled.header`
+export const HeaderWrapper = styled.header`
     width: 100%;
     height: 80px;
 
@@ -15,7 +15,3 @@ const HeaderWrapper = styled.header`
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 `
-
-export {
-    HeaderWrapper,
-}

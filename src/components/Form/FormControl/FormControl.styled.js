@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-const FormInput = styled.input`
+export const FormInput = styled.input`
     width: 100%;
     height: 50px;
-    float: left;
     color: #fff;
     font-size: 15px;
     font-weight: 400;
@@ -14,18 +13,5 @@ const FormInput = styled.input`
     border: 0;
     box-shadow: none;
     outline: none;
-
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    
-    &::-webkit-input-placeholder {
-      color: rgba(255, 255, 255, 0.75);
-    }
-    
-    &:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.75);
-}
 `
-const FormLabel = styled.label``
-
-export {FormInput, FormLabel}
+export const FormLabel = styled.label``

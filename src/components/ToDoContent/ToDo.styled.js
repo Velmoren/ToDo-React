@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 const ToDoContainer = styled.div`
     width: 100%;
-    float: left;
     padding: 15px;
 `
 
 const ToDoList = styled.ul`
     width: 100%;
-    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding-left: 0;
     list-style: none;
 `
@@ -37,10 +37,8 @@ const ToDoListCompleted = styled(ToDoList)`
         background: #d8e5e0;
     
         position: absolute;
-        top: 30px;
-        left: 50%;
-    
-        margin: 0 0 0 -75px;
+        top: 25px;
+        left: calc(50% - 75px);
     }
     
     &:empty:after {

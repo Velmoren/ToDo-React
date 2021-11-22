@@ -1,5 +1,3 @@
 import styled from 'styled-components';
 
-const FormBlock = styled.form``
-
-export {FormBlock}
+export const FormBlock = styled.form``
