@@ -16,6 +16,7 @@ const App = () => {
             <MainPage />
         </HelmetProvider>
     );
+
 }
 
 export default App;
