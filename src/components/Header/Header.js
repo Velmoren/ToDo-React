@@ -9,7 +9,7 @@ const Header = () => {
 
     const submitForm = (e) => {
         e.preventDefault()
-        dispatch({ type: 'ADD_TODO', text: 'random text' })
+        value === "" ? alert("Заполните поле ввода!") : dispatch({ type: 'ADD_TODO' })
     }
 
     const onChangeInput = (e) => {
