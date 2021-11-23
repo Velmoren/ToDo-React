@@ -14,12 +14,14 @@ const GlobalStyle = createGlobalStyle`
   
   body {
       background-color: #edf0f1;
-      padding: 80px 0 0 0;
+      padding: 50px 0 0 0;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       line-height: 1.429;
       color: black;
   }
+
+  $primary-color: #4682b4;
 `
 
 export default GlobalStyle;

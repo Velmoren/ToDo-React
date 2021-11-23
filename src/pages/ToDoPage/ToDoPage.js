@@ -1,13 +1,13 @@
 import { ToDoContent } from "../../components";
-import { Header } from '../../components'
+import { Form } from '../../components'
 
-const MainPage = () => {
+const ToDoPage = () => {
     return (
         <>
-            <Header />
+            <Form />
             <ToDoContent />
         </>
     );
 };
 
-export default MainPage;
+export default ToDoPage;

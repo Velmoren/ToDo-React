@@ -1,17 +1,33 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const HeaderWrapper = styled.header`
-    width: 100%;
-    height: 80px;
-
     position: fixed;
-    padding: 15px;
     top: 0;
+    right: 0;
     left: 0;
-    z-index: 5;
+    height: 50px;
+    background-color: ${({ theme }) => theme.colors.color_blue};
 
-    background-color: steelblue;
-    box-shadow: 0 2px 4px rgba(44, 62, 80, 0.15);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    display: flex;
+    align-items: center;
+`
+
+export const HeaderContainer = styled.div`
+    max-width: 97%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+export const HeaderLink = styled(NavLink)`
+    text-decoration: none;
+    padding: 10px;
+    color: ${({ theme }) => theme.colors.color_white};
+
+    &.active {
+        color: ${({ theme }) => theme.colors.color_blue_light};
+    }
 `

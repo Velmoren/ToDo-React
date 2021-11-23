@@ -1,3 +1,4 @@
-import MainPage from "./MainPage/MainPage";
+import ToDoPage from "./ToDoPage/ToDoPage";
+import TableToDoPage from "./TableToDoPage/TableToDoPage";
 
-export { MainPage };
+export { ToDoPage, TableToDoPage };

@@ -1,28 +1,12 @@
-import Form from "../Form/Form";
-import { useDispatch, useSelector } from 'react-redux'
-
-import { HeaderWrapper } from './Header.styled'
+import { HeaderWrapper, HeaderContainer, HeaderLink } from './Header.styled'
 
 const Header = () => {
-    const value = useSelector((state) => state.todo.inputValue)
-    const dispatch = useDispatch()
-
-    const submitForm = (e) => {
-        e.preventDefault()
-        value === "" ? alert("Заполните поле ввода!") : dispatch({ type: 'ADD_TODO' })
-    }
-
-    const onChangeInput = (e) => {
-        dispatch({ type: 'CHANGE_INPUT_VALUE', value: e.target.value })
-    }
-
     return (
         <HeaderWrapper>
-            <Form
-                valueInput={value}
-                onSubmit={submitForm}
-                onChangeInput={onChangeInput}
-            />
+            <HeaderContainer>
+                <HeaderLink to={'/'}>ToDo</HeaderLink>
+                <HeaderLink to={'/table'}>Table</HeaderLink>
+            </HeaderContainer>
         </HeaderWrapper>
     );
 }
